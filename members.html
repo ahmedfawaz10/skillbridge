@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Members | SkillBridge</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom-styles.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="index.html"><i class="bi bi-arrow-left-right"></i> SkillBridge</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Explore</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="index.html#how-it-works">How It Works</a></li>
+              <li><a class="dropdown-item" href="index.html#faq">FAQ</a></li>
+              <li><a class="dropdown-item" href="index.html#featured">Featured Members</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-primary btn-sm" href="contact.html">Join SkillBridge</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header / breadcrumb -->
+  <div class="page-header">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-1">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Members</li>
+        </ol>
+      </nav>
+      <h1 class="h3 mb-0">Browse Members</h1>
+    </div>
+  </div>
+
+  <section class="py-5">
+    <div class="container">
+
+      <!-- Alert -->
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="bi bi-patch-check-fill"></i>
+        New this week: <strong>24 members</strong> joined to trade skills instead of paying for courses.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+
+      <!-- Filters -->
+      <div class="row g-3 align-items-center mb-2">
+        <div class="col-lg-4">
+          <input id="searchInput" type="text" class="form-control form-control-lg" placeholder="Search by name, skill or city...">
+        </div>
+        <div class="col-6 col-lg-2">
+          <select id="filterRole" class="form-select form-select-lg">
+            <option value="all">All Roles</option>
+          </select>
+        </div>
+        <div class="col-6 col-lg-2">
+          <select id="availabilityFilter" class="form-select form-select-lg">
+            <option value="all">Availability</option>
+            <option value="Available">Available</option>
+            <option value="Busy">Busy</option>
+            <option value="Offline">Offline</option>
+          </select>
+        </div>
+
+        <!-- Sort — Bootstrap Dropdown component -->
+        <div class="col-6 col-lg-2">
+          <div class="dropdown">
+            <button class="btn btn-outline-primary btn-lg w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              <span id="sortLabel">Sort By</span>
+            </button>
+            <ul class="dropdown-menu w-100">
+              <li><a class="dropdown-item sort-option" href="#" data-sort="default">Default</a></li>
+              <li><a class="dropdown-item sort-option" href="#" data-sort="rating">Rating</a></li>
+              <li><a class="dropdown-item sort-option" href="#" data-sort="credits">Credits</a></li>
+              <li><a class="dropdown-item sort-option" href="#" data-sort="sessions">Sessions</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- View toggle — Button Group -->
+        <div class="col-6 col-lg-2">
+          <div class="btn-group w-100" role="group" aria-label="View toggle">
+            <button type="button" class="btn btn-outline-primary view-toggle active" data-view="grid3"><i class="bi bi-grid-3x3-gap"></i></button>
+            <button type="button" class="btn btn-outline-primary view-toggle" data-view="grid2"><i class="bi bi-grid"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- More filters — Collapse component -->
+      <div class="mb-4">
+        <button class="btn btn-link ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#moreFilters">
+          <i class="bi bi-sliders"></i> More filters
+        </button>
+        <div class="collapse" id="moreFilters">
+          <div class="card card-body border-0 shadow-sm">
+            <label for="cityFilter" class="form-label fw-semibold">City</label>
+            <select id="cityFilter" class="form-select">
+              <option value="all">All Cities</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile quick filters button -->
+      <button class="btn btn-outline-primary mb-4 d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas">
+        <i class="bi bi-funnel"></i> Quick Filters
+      </button>
+
+      <!-- Loading -->
+      <div id="loading" class="text-center py-5">
+        <div class="spinner-border text-primary"></div>
+      </div>
+
+      <!-- Empty state -->
+      <div id="emptyState" class="text-center py-5 d-none">
+        <i class="bi bi-search display-1 text-secondary"></i>
+        <h3 class="mt-3">No Members Found</h3>
+        <p class="text-muted">Try adjusting your search or filters.</p>
+      </div>
+
+      <!-- Cards -->
+      <div id="members">
+        <div id="cardsContainer" class="row g-4"></div>
+      </div>
+
+      <!-- Pagination -->
+      <nav aria-label="Members pagination" class="mt-5">
+        <ul id="pagination" class="pagination justify-content-center"></ul>
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- Offcanvas — mobile quick filters -->
+  <div class="offcanvas offcanvas-start" id="filterOffcanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Quick Filters</h5>
+      <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <h6 class="fw-semibold">Availability</h6>
+      <div class="btn-group w-100 mb-4" role="group">
+        <button class="btn btn-outline-success offcanvas-availability" data-availability="Available">Available</button>
+        <button class="btn btn-outline-warning offcanvas-availability" data-availability="Busy">Busy</button>
+        <button class="btn btn-outline-secondary offcanvas-availability" data-availability="all">All</button>
+      </div>
+      <h6 class="fw-semibold">Role</h6>
+      <div id="offcanvasRoleList" class="list-group"></div>
+    </div>
+  </div>
+
+  <!-- Exchange Skill Modal -->
+  <div class="modal fade" id="exchangeModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            <img id="exchangeMemberImage" src="" alt="" width="36" height="36" class="rounded-circle me-2">
+            Exchange with <span id="exchangeMemberName"></span>
+          </h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="exchangeForm" class="needs-validation" novalidate>
+          <div class="modal-body">
+            <p class="text-muted mb-3">Role: <span id="exchangeMemberRole"></span></p>
+
+            <div class="mb-3">
+              <label class="form-label">Skill you can teach in return</label>
+              <input type="text" class="form-control" required placeholder="e.g. Arabic conversation practice">
+              <div class="invalid-feedback">Please tell them what you can offer.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="3" required placeholder="Say hello and suggest a time..."></textarea>
+              <div class="invalid-feedback">Please add a short message.</div>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+              <label class="form-check-label" for="agreeTerms">I agree to the SkillBridge exchange guidelines</label>
+              <div class="invalid-feedback">You must agree before sending a request.</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Send Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="exchangeToast" class="toast align-items-center text-bg-primary border-0" role="alert">
+      <div class="d-flex">
+        <div class="toast-body" id="toastMessage"></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer py-4">
+    <div class="container text-center">
+      <p class="mb-0">© <span id="year"></span> SkillBridge | Learn • Teach • Grow</p>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/custom-scripts.js"></script>
+  <script src="js/members-app.js"></script>
+</body>
+</html>

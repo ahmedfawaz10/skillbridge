@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge | Trade Skills, Not Money</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom-styles.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="index.html"><i class="bi bi-arrow-left-right"></i> SkillBridge</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Explore</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#how-it-works">How It Works</a></li>
+              <li><a class="dropdown-item" href="#faq">FAQ</a></li>
+              <li><a class="dropdown-item" href="#featured">Featured Members</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-primary btn-sm" href="contact.html">Join SkillBridge</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="container text-center">
+      <span class="hero-eyebrow">Learn something · Teach something</span>
+      <h1 class="display-4 fw-bold">Exchange Skills, Not Invoices</h1>
+      <p class="lead mt-3">
+        SkillBridge connects people who want to learn with people who want to teach —
+        no course fees, just a fair trade of time and knowledge.
+      </p>
+      <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
+        <a href="members.html" class="btn btn-primary btn-lg px-4">
+          <i class="bi bi-search"></i> Browse Members
+        </a>
+        <a href="contact.html" class="btn btn-outline-primary btn-lg px-4">
+          Join the Community
+        </a>
+      </div>
+
+      <!-- CTA — Button Group -->
+      <div class="mt-4">
+        <div class="btn-group" role="group" aria-label="Choose your path">
+          <a href="members.html?intent=learn" class="btn btn-gold">I want to Learn</a>
+          <a href="members.html?intent=teach" class="btn btn-outline-primary">I want to Teach</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-6 col-lg-3">
+          <h3 class="stat-number text-primary">24</h3>
+          <p class="text-muted mb-0">Active Members</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h3 class="stat-number text-primary">1,240+</h3>
+          <p class="text-muted mb-0">Sessions Completed</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h3 class="stat-number text-primary">4.8<i class="bi bi-star-fill text-warning" style="font-size:0.6em"></i></h3>
+          <p class="text-muted mb-0">Average Rating</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h3 class="stat-number text-primary">0 EGP</h3>
+          <p class="text-muted mb-0">Ever Charged</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works — List Group -->
+  <section id="how-it-works" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-7">
+          <h2 class="section-title">How SkillBridge Works</h2>
+          <p class="section-subtitle mx-auto">Four simple steps take you from browsing to your first exchange.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item how-step d-flex align-items-start">
+              <div class="ms-2">
+                <div class="fw-semibold">Create your profile</div>
+                List the skills you can teach and the ones you'd like to learn.
+              </div>
+            </li>
+            <li class="list-group-item how-step d-flex align-items-start">
+              <div class="ms-2">
+                <div class="fw-semibold">Browse & filter members</div>
+                Search by role, city, or availability to find the right match.
+              </div>
+            </li>
+            <li class="list-group-item how-step d-flex align-items-start">
+              <div class="ms-2">
+                <div class="fw-semibold">Propose an exchange</div>
+                Send a request describing what you'll teach in return.
+              </div>
+            </li>
+            <li class="list-group-item how-step d-flex align-items-start">
+              <div class="ms-2">
+                <div class="fw-semibold">Learn, teach, and rate</div>
+                Meet up, exchange knowledge, and leave a review for the community.
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Members — Carousel -->
+  <section id="featured" class="py-5 bg-white">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-4">
+        <div class="col-lg-7">
+          <h2 class="section-title">Featured Members</h2>
+          <p class="section-subtitle mx-auto">A few of the highest-rated mentors on SkillBridge this month.</p>
+        </div>
+      </div>
+
+      <div id="featuredCarousel" class="carousel slide featured-carousel" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-md-4">
+                <div class="member-card">
+                  <div class="card-content">
+                    <img src="assets/images/member6.jpg" class="member-image" alt="Nour Ibrahim">
+                    <h3 class="member-name">Nour Ibrahim</h3>
+                    <p class="member-role">Cyber Security Specialist</p>
+                    <div class="rating">⭐ 5.0 <small>(201 Reviews)</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-4">
+                <div class="member-card">
+                  <div class="card-content">
+                    <img src="assets/images/member4.jpg" class="member-image" alt="Mariam Samy">
+                    <h3 class="member-name">Mariam Samy</h3>
+                    <p class="member-role">Data Analyst</p>
+                    <div class="rating">⭐ 4.9 <small>(174 Reviews)</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-4">
+                <div class="member-card">
+                  <div class="card-content">
+                    <img src="assets/images/member1.jpg" class="member-image" alt="Ahmed Hassan">
+                    <h3 class="member-name">Ahmed Hassan</h3>
+                    <p class="member-role">Frontend Developer</p>
+                    <div class="rating">⭐ 4.9 <small>(152 Reviews)</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="members.html" class="btn btn-outline-primary">See All Members</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ — Accordion -->
+  <section id="faq" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-4">
+        <div class="col-lg-7">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Is SkillBridge really free?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. There's no cash involved — members trade time and skills instead of paying course fees.
+                  Credits just track how much you've given and received.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  How do I start an exchange?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Browse the Members page, open a profile you like, and use the "Exchange Skill" button
+                  to send a short proposal describing what you can teach in return.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  What if I don't have an advanced skill to offer?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Everyone knows something someone else doesn't. Language practice, spreadsheet tricks,
+                  photo editing, or even fitness routines all count.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  How are ratings calculated?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  After each session both members rate each other. The average is shown on every profile
+                  alongside the total number of reviews.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4">
+    <div class="container text-center">
+      <p class="mb-0">© <span id="year"></span> SkillBridge | Learn • Teach • Grow</p>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/custom-scripts.js"></script>
+</body>
+</html>
