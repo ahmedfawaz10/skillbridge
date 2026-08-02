@@ -519,10 +519,8 @@ a {
   font-size: 0.6em;
 }
 
-/* ==========================================================
-   Profile Page Tabs Fix
-   (Only affects profile.html)
-   ========================================================== */
+/* Profile Page Tabs Fix
+   (Only affects profile.html) */
 
 #profileTabs {
     gap: .5rem;
@@ -551,4 +549,29 @@ a {
 
 #profileTabs .nav-item {
     margin-bottom: 0;
+}
+
+/* Member Card Buttons Fix */
+
+/* Keep View Profile outlined by default */
+.member-card .btn-outline-primary {
+    background: #fff;
+    color: var(--sb-teal-dark);
+    border: 1px solid var(--sb-teal);
+}
+
+/* Hover = blue (Bootstrap primary) */
+.member-card .btn-outline-primary:hover,
+.member-card .btn-outline-primary:focus {
+    background: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: #fff;
+}
+
+/* Exchange Skill stays green */
+.member-card .btn-primary:hover,
+.member-card .btn-primary:focus {
+    background: var(--sb-teal-dark);
+    border-color: var(--sb-teal-dark);
+    color: #fff;
 }
