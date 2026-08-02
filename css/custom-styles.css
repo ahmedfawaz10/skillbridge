@@ -518,3 +518,21 @@ a {
 .hero-star {
   font-size: 0.6em;
 }
+
+/* Fix Profile Tabs */
+#profileTabs .nav-link {
+    color: var(--sb-teal-dark) !important;
+    background: transparent !important;
+    border-radius: 30px;
+}
+
+#profileTabs .nav-link.active,
+#profileTabs .show > .nav-link {
+    background: var(--sb-teal) !important;
+    color: #ffffff !important;
+}
+
+#profileTabs .nav-link:hover:not(.active) {
+    background: var(--sb-teal-light) !important;
+    color: var(--sb-teal-dark) !important;
+}
