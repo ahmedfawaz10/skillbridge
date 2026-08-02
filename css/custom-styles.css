@@ -182,7 +182,8 @@ a {
   border-color: var(--sb-teal);
 }
 
-.btn-outline-primary {
+.btn-outline-primary,
+.choice-btn {
   color: var(--sb-teal-dark);
   border-color: var(--sb-teal);
 }
@@ -191,6 +192,12 @@ a {
     background: var(--sb-teal);
     border-color: var(--sb-teal);
     color: #fff;
+}
+
+.choice-btn:hover,
+.choice-btn.active {
+  background: var(--sb-gold-dark) !important;
+  color: var(--sb-white)!important;
 }
 
 .btn-gold,
@@ -210,17 +217,7 @@ a {
   padding: 10px 26px;
 }
 
-/* Choice Buttons */
-.choice-btn {
-  background: transparent!important;
-   border-color: var(--sb-teal); !important;
-  color: var(--sb-ink); !important;
-}
-.choice-btn:hover,
-.choice-btn.active {
-  background: var(--sb-gold-dark) !important;
-  color: var(--sb-white)!important;
-}
+
 
 /* ---------- Cards (members) ---------- */
 .member-card {
