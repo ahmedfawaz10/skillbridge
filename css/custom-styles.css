@@ -509,22 +509,22 @@ a {
 
 /* Profile Tabs */
 #profileTabs .nav-link {
-  border-radius: 999px;
-  border: 1px solid transparent;
-  color: var(--sb-teal-dark);
-  transition: all 0.25s ease;
+  border-radius: 999px !important;
+  border: 1px solid transparent !important;
+  color: var(--sb-teal-dark) !important;
+  transition: all 0.25s ease !important;
 }
 
 #profileTabs .nav-link:hover:not(.active) {
-  background: #b7e4df;
-  border-color: var(--sb-teal);
-  color: var(--sb-teal-dark);
+  background: #b7e4df !important;
+  border-color: var(--sb-teal) !important;
+  color: var(--sb-teal-dark) !important;
 }
 
 #profileTabs .nav-link.active,
 #profileTabs .show > .nav-link {
-  background: var(--sb-teal);
-  border-color: var(--sb-teal);
+  background: var(--sb-teal) !important;
+  border-color: var(--sb-teal) !important;
   color: #fff !important;
 }
 
