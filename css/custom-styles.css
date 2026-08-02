@@ -94,8 +94,8 @@ a {
   transition: 0.25s;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
   color: var(--sb-teal) !important;
 }
 
