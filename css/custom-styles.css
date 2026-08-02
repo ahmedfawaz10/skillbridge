@@ -194,8 +194,8 @@ a {
 }
 
 .btn-click:hover {
-  background: rgb(88, 183, 205);
-  border-color: var(--sb-teal);
+  background: rgb(88, 183, 205) !important;
+  border-color: var(--sb-teal) !important;
 }
 
 
