@@ -141,7 +141,7 @@ function renderPage() {
             </span>
 
             <div class="d-flex gap-2 justify-content-center mt-3 flex-wrap">
-              <a href="profile.html?id=${member.id}" class="btn btn-outline-primary btn-sm">View Profile</a>
+              <a href="profile.html?id=${member.id}" class="btn btn-click btn-sm">View Profile</a>
               <button class="btn btn-primary btn-sm exchange-btn mt-0"
                       data-bs-toggle="modal" data-bs-target="#exchangeModal"
                       data-name="${member.name}" data-role="${member.role}" data-image="${member.image}" data-fallback="${fallbackUrl}">
