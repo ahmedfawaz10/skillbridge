@@ -210,6 +210,19 @@ a {
   padding: 10px 26px;
 }
 
+/* Choice Buttons */
+.choice-btn {
+  background: transparent;
+  border: 2px solid var(--sb-gold);
+  color: var(--sb-gold-dark);
+}
+.choice-btn:hover,
+.choice-btn.active {
+  background: var(--sb-gold);
+  border-color: var(--sb-gold);
+  color: #fff;
+}
+
 /* ---------- Cards (members) ---------- */
 .member-card {
   background: var(--sb-white);
