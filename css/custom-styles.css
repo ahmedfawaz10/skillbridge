@@ -183,7 +183,8 @@ a {
 }
 
 .btn-outline-primary,
-.btn-choice {
+.btn-choice,
+.btn-click{
   color: var(--sb-teal-dark);
   border-color: var(--sb-teal);
 }
@@ -191,6 +192,12 @@ a {
 .btn-outline-primary:hover {
   background: var(--sb-teal);
 }
+
+.btn-click:hover {
+  background: rgb(88, 183, 205);
+  border-color: var(--sb-teal);
+}
+
 
 /* .btn-gold,
 .btn-secondary {
