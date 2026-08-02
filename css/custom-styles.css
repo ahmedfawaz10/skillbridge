@@ -188,7 +188,9 @@ a {
 }
 
 .btn-outline-primary:hover {
-  background: var(--sb-teal);
+    background: var(--sb-teal);
+    border-color: var(--sb-teal);
+    color: #fff;
 }
 
 .btn-gold,
@@ -551,26 +553,33 @@ a {
     margin-bottom: 0;
 }
 
-/* Member Card Buttons Fix */
+/* Members Page Buttons */
 
-/* Keep View Profile outlined by default */
+/* View Profile */
 .member-card .btn-outline-primary {
     background: #fff;
     color: var(--sb-teal-dark);
     border: 1px solid var(--sb-teal);
 }
 
-/* Hover = blue (Bootstrap primary) */
 .member-card .btn-outline-primary:hover,
 .member-card .btn-outline-primary:focus {
-    background: var(--bs-primary);
-    border-color: var(--bs-primary);
+    background: #0d6efd;   /* Blue */
+    border-color: #0d6efd;
     color: #fff;
 }
 
-/* Exchange Skill stays green */
+/* Exchange Skill */
+.member-card .btn-primary,
+.member-card .exchange-btn {
+    background: var(--sb-teal);
+    border-color: var(--sb-teal);
+}
+
 .member-card .btn-primary:hover,
-.member-card .btn-primary:focus {
+.member-card .btn-primary:focus,
+.member-card .exchange-btn:hover,
+.member-card .exchange-btn:focus {
     background: var(--sb-teal-dark);
     border-color: var(--sb-teal-dark);
     color: #fff;
