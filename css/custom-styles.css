@@ -508,20 +508,26 @@ a {
 }
 
 /* Profile Tabs */
-.nav-pills .nav-link {
+#profileTabs .nav-link {
+  border-radius: 999px;
+  border: 1px solid transparent;
   color: var(--sb-teal-dark);
-  background: transparent;
+  transition: all 0.25s ease;
 }
 
-.nav-pills .nav-link.active {
-  background-color: var(--sb-teal);
+#profileTabs .nav-link:hover:not(.active) {
+  background: #b7e4df;
+  border-color: var(--sb-teal);
+  color: var(--sb-teal-dark);
+}
+
+#profileTabs .nav-link.active,
+#profileTabs .show > .nav-link {
+  background: var(--sb-teal);
+  border-color: var(--sb-teal);
   color: #fff !important;
 }
 
-.nav-pills .nav-link:hover {
-  background-color: var(--sb-teal-light);
-  color: var(--sb-teal-dark);
-}
 
 .hero-star {
   font-size: 0.6em;
