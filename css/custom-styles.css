@@ -213,7 +213,7 @@ a {
 /* Choice Buttons */
 .choice-btn {
   background: transparent!important;
-  border: 2px solid var(--sb-gold) !important;
+   border-color: var(--sb-teal); !important;
   color: var(--sb-gold-dark) !important;
 }
 .choice-btn:hover,
