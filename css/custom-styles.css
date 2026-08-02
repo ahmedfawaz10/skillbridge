@@ -183,31 +183,23 @@ a {
 }
 
 .btn-outline-primary,
-.choice-btn {
+.btn-choice {
   color: var(--sb-teal-dark);
   border-color: var(--sb-teal);
 }
 
 .btn-outline-primary:hover {
-    background: var(--sb-teal);
-    border-color: var(--sb-teal);
-    color: #fff;
+  background: var(--sb-teal);
 }
 
-
-.choice-btn:hover {
-  background: var(--sb-gold-dark);
-  color: var(--sb-white);
-}
-
-.btn-gold,
+/* .btn-gold,
 .btn-secondary {
   background: var(--sb-gold);
   border-color: var(--sb-gold);
   color: var(--sb-ink);
-}
+} */
 
-.btn-gold:hover {
+.btn-choice:hover {
   background: var(--sb-gold-dark);
   color: var(--sb-white);
 }
@@ -216,8 +208,6 @@ a {
   margin-top: 20px;
   padding: 10px 26px;
 }
-
-
 
 /* ---------- Cards (members) ---------- */
 .member-card {
@@ -528,68 +518,4 @@ a {
 
 .hero-star {
   font-size: 0.6em;
-}
-
-/* Profile Page Tabs Fix
-   (Only affects profile.html) */
-
-#profileTabs {
-    gap: .5rem;
-}
-
-#profileTabs .nav-link {
-    color: var(--sb-teal-dark) !important;
-    background: transparent !important;
-    border: none;
-    border-radius: 999px;
-    padding: .55rem 1.15rem;
-    font-weight: 600;
-    transition: all .2s ease;
-}
-
-#profileTabs .nav-link:hover:not(.active) {
-    background: var(--sb-teal-light) !important;
-    color: var(--sb-teal-dark) !important;
-}
-
-#profileTabs .nav-link.active,
-#profileTabs .show > .nav-link {
-    background: var(--sb-teal) !important;
-    color: #fff !important;
-}
-
-#profileTabs .nav-item {
-    margin-bottom: 0;
-}
-
-/* Members Page Buttons */
-
-/* View Profile */
-.member-card .btn-outline-primary {
-    background: #fff;
-    color: var(--sb-teal-dark);
-    border: 1px solid var(--sb-teal);
-}
-
-.member-card .btn-outline-primary:hover,
-.member-card .btn-outline-primary:focus {
-    background: #0d6efd;   /* Blue */
-    border-color: #0d6efd;
-    color: #fff;
-}
-
-/* Exchange Skill */
-.member-card .btn-primary,
-.member-card .exchange-btn {
-    background: var(--sb-teal);
-    border-color: var(--sb-teal);
-}
-
-.member-card .btn-primary:hover,
-.member-card .btn-primary:focus,
-.member-card .exchange-btn:hover,
-.member-card .exchange-btn:focus {
-    background: var(--sb-teal-dark);
-    border-color: var(--sb-teal-dark);
-    color: #fff;
 }
