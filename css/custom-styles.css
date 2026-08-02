@@ -519,20 +519,36 @@ a {
   font-size: 0.6em;
 }
 
-/* Fix Profile Tabs */
+/* ==========================================================
+   Profile Page Tabs Fix
+   (Only affects profile.html)
+   ========================================================== */
+
+#profileTabs {
+    gap: .5rem;
+}
+
 #profileTabs .nav-link {
     color: var(--sb-teal-dark) !important;
     background: transparent !important;
-    border-radius: 30px;
-}
-
-#profileTabs .nav-link.active,
-#profileTabs .show > .nav-link {
-    background: var(--sb-teal) !important;
-    color: #ffffff !important;
+    border: none;
+    border-radius: 999px;
+    padding: .55rem 1.15rem;
+    font-weight: 600;
+    transition: all .2s ease;
 }
 
 #profileTabs .nav-link:hover:not(.active) {
     background: var(--sb-teal-light) !important;
     color: var(--sb-teal-dark) !important;
+}
+
+#profileTabs .nav-link.active,
+#profileTabs .show > .nav-link {
+    background: var(--sb-teal) !important;
+    color: #fff !important;
+}
+
+#profileTabs .nav-item {
+    margin-bottom: 0;
 }
