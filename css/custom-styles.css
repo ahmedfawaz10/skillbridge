@@ -183,7 +183,7 @@ a {
 }
 
 .btn-outline-primary,
-.btn-choice {
+.choice-btn {
   color: var(--sb-teal-dark);
   border-color: var(--sb-teal);
 }
@@ -195,7 +195,7 @@ a {
 }
 
 
-.btn-choice:hover {
+.choice-btn:hover {
   background: var(--sb-gold-dark);
   color: var(--sb-white);
 }
