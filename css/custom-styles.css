@@ -212,14 +212,14 @@ a {
 
 /* Choice Buttons */
 .choice-btn {
-  background: transparent;
-  border: 2px solid var(--sb-gold);
-  color: var(--sb-gold-dark);
+  background: transparent!important;
+  border: 2px solid var(--sb-gold) !important;
+  color: var(--sb-gold-dark) !important;
 }
 .choice-btn:hover,
 .choice-btn.active {
-  background: var(--sb-gold-dark);
-  color: var(--sb-white);
+  background: var(--sb-gold-dark) !important;
+  color: var(--sb-white)!important;
 }
 
 /* ---------- Cards (members) ---------- */
