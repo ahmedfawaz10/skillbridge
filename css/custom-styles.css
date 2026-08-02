@@ -214,7 +214,7 @@ a {
 .choice-btn {
   background: transparent!important;
    border-color: var(--sb-teal); !important;
-  color: var(--sb-gold-dark) !important;
+  color: var(--sb-ink); !important;
 }
 .choice-btn:hover,
 .choice-btn.active {
