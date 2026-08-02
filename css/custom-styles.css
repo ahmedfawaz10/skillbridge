@@ -218,9 +218,8 @@ a {
 }
 .choice-btn:hover,
 .choice-btn.active {
-  background: var(--sb-gold);
-  border-color: var(--sb-gold);
-  color: #fff;
+  background: var(--sb-gold-dark);
+  color: var(--sb-white);
 }
 
 /* ---------- Cards (members) ---------- */
